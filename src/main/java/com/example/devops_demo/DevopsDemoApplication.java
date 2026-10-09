@@ -20,6 +20,6 @@ public class DevopsDemoApplication {
 
 	@GetMapping("/status")
 	public String status() {
-		return "Application is running fine.";
+		return "Application changed";
 	}
 }
