@@ -1,13 +1,31 @@
 package com.example.devops_demo;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class DevopsDemoApplicationTests {
+class DevopsDemoApplicationMethodTests {
 
-	@Test
-	void contextLoads() {
-	}
+    private final DevopsDemoApplication app = new DevopsDemoApplication();
 
+    @Test
+    void homeReturnsMessage() {
+        assertEquals("Hello from DevOps Demo App!", app.home());
+    }
+
+    @Test
+    void statusReturnsMessage() {
+        assertEquals("Application changed", app.status());
+    }
+
+    @Test
+    void homeIsNotEmpty() {
+        assertFalse(app.home().isEmpty());
+    }
+
+    @Test
+    void statusIsNotEmpty() {
+        assertFalse(app.status().isEmpty());
+    }
 }
