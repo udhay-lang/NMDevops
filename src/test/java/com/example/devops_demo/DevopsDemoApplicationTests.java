@@ -16,7 +16,7 @@ class DevopsDemoApplicationMethodTests {
 
     @Test
     void statusReturnsMessage() {
-        assertEquals("Application changed", app.status());
+        assertEquals("wrong", app.status());
     }
 
     @Test
